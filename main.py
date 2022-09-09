@@ -81,7 +81,7 @@ def index():
 
 
 def watermark(message):
-    file_id = message.photo[len(message.photo) - 1].file_id
+    file_id = message.photo[- 1].file_id
     # file_id = message['photo'][len(message['photo']) - 1]['file_id']
     getFile = requests.get(f'{URL}getFile?file_id={file_id}').json()
     file_path = getFile['result']['file_path']
