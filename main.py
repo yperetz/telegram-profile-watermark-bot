@@ -36,7 +36,8 @@ def webhook():
             else:
                 bot.sendMessage(chat_id=chat_id, text=f"not a photo",
                                 reply_to_message_id=message.message_id)
-        bot.sendMessage(chat_id=chat_id, text=f"an error occurred")
+        else:
+            bot.sendMessage(chat_id=chat_id, text=f"an error occurred")
 
         # Reply with the same message
         return 'ok'
