@@ -26,8 +26,8 @@ def webhook():
     if request.method == "POST":
         update = telegram.Update.de_json(request.get_json(force=True), bot)
         chat_id = update.effective_chat.id
-        text = update.message.text
-        first_name = update.effective_chat.first_name
+        # text = update.message.text
+        # first_name = update.effective_chat.first_name
         message = update.message
         if message is not None:
             if message.photo is not None and len(message.photo) > 0:
