@@ -30,7 +30,7 @@ def webhook():
         first_name = update.effective_chat.first_name
         message = update.message
         if message is not None:
-            if message.photo is not None:
+            if message.photo is not None and len(message.delete_chat_photo) > 0:
                 # message.reply_photo()
                 watermark(message)
             else:
